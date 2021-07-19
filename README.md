@@ -13,13 +13,13 @@ Replace with your name and item.
 ## Day 1 Retrospective
 
 ### What went well communication
-
+We had a good level of productivity today and we worked well in a team.
 ### What didn't go well
-
+Not all members were present at the beginnng
 ### What we will do more of tomorrow
-
+Tomorrow we will continue going through the stories and do more coding.
 ### What we will do less of tomorrow
-
+Waiting (hopefully) and no panicking.
 ## Day 2 Retrospective
 
 ## Final Retrospective
