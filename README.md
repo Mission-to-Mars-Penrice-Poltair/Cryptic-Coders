@@ -12,7 +12,7 @@ Replace with your name and item.
 
 ## Day 1 Retrospective
 
-### What went well communication
+### What went well
 We had a good level of productivity today and we worked well in a team.
 ### What didn't go well
 Not all members were present at the beginnng
