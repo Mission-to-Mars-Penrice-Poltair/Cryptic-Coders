@@ -29,10 +29,10 @@ void loop(){
     exit(0);
   }
   else {
-    forward(2,255);
-    turnLeft(3,80,255);
-    forward(2,255);
-    turnRight(3,255,80);
+    forward(2000,255);
+    turnLeft(3000,80,255);
+    forward(2000,255);
+    turnRight(3000,255,80);
   }
 }
 
