@@ -30,7 +30,7 @@ void loop(){
   }
   else {
     if (leftcounter > rightcounter) {
-      turnLeft(500,80,255);
+      turnLeft(1000,80,255);
     }
     else if (rightcounter > leftcounter) {
       turnRight(500,255,80);
