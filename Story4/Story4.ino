@@ -1,3 +1,6 @@
+// C++ code
+//
+
 const int RIGHTFORWARD = 7; //Yellow
 const int RIGHTREVERSE = 8; //Red
 const int RIGHTENABLE = 9; //Blue
@@ -5,8 +8,8 @@ const int LEFTFORWARD = 11; //Yellow
 const int LEFTREVERSE = 12; //Red
 const int LEFTENABLE = 10; //Blue
 
-const int LEFT_FEEDBACK = 3; // Pin numbers on Rover
-const int RIGHT_FEEDBACK = 2;
+const int LEFT_FEEDBACK = 2; // Pin numbers on Rover
+const int RIGHT_FEEDBACK = 3;
 volatile int leftcounter = 0; // initiate counter to zero for start
 volatile int rightcounter = 0; // counter could always be reset
 
@@ -24,33 +27,36 @@ void setup()
 }
 
 void loop(){
-  if (millis() >= 20000){
+   
+  if (leftcounter >= 870){
+    Serial.println("Counter has reached 870"); // 2 metres finished (435 revolutiosn per metre)
     roverStop(0);
-    exit(0);
   }
-  //else {
-    forward(2000,255);
-    turnLeft(3000,80,255);
-    forward(2000,255);
-    turnRight(3000,255,80);
-  //}
+  else {
+    forward(0);
+    //Just print out the values to show counter operating
+    Serial.print("Left Counter ");
+    Serial.println(leftcounter); //This is printing then a new Line after
+  Serial.print("Right Counter ");
+    Serial.println(rightcounter);
+  }
 }
 
-void forward(int seconds, int speed) {
-  analogWrite(RIGHTENABLE, speed); //
+void forward(int seconds) {
+  digitalWrite(RIGHTENABLE, HIGH);
   digitalWrite(RIGHTFORWARD, HIGH); 
   digitalWrite(RIGHTREVERSE, LOW);
-  analogWrite(LEFTENABLE, speed); //
+  digitalWrite(LEFTENABLE,HIGH);
   digitalWrite(LEFTFORWARD, HIGH);
   digitalWrite(LEFTREVERSE, LOW); 
   delay(seconds);
 }  
   
-void backward(int seconds, int speed){
-  analogWrite(RIGHTENABLE, speed); //
+void backward(int seconds){
+  digitalWrite(RIGHTENABLE, HIGH);
   digitalWrite(RIGHTFORWARD, LOW);
   digitalWrite(RIGHTREVERSE, HIGH);
-  analogWrite(LEFTENABLE, speed); //
+  digitalWrite(LEFTENABLE, HIGH);
   digitalWrite(LEFTFORWARD, LOW);
   digitalWrite(LEFTREVERSE, HIGH); 
   delay(seconds);
@@ -59,32 +65,12 @@ void backward(int seconds, int speed){
   
 void roverStop(int seconds)
 {
-  digitalWrite(RIGHTENABLE, LOW); //
+  digitalWrite(RIGHTENABLE, LOW);
   digitalWrite(RIGHTFORWARD, LOW);
-  digitalWrite(RIGHTREVERSE, LOW); 
-  digitalWrite(LEFTENABLE, LOW); //
+  digitalWrite(RIGHTREVERSE, LOW);
+  digitalWrite(LEFTENABLE, LOW);
   digitalWrite(LEFTFORWARD, LOW);
   digitalWrite(LEFTREVERSE, LOW);
-  delay(seconds);
-}
-
-void turnLeft(int seconds, int speedLeft, int speedRight) {
-  analogWrite(RIGHTENABLE, speedRight); //
-  digitalWrite(RIGHTFORWARD, HIGH); 
-  digitalWrite(RIGHTREVERSE, LOW);
-  analogWrite(LEFTENABLE, speedLeft); //
-  digitalWrite(LEFTFORWARD, HIGH);
-  digitalWrite(LEFTREVERSE, LOW); 
-  delay(seconds);
-}
-
-void turnRight(int seconds, int speedLeft, int speedRight) {
-  analogWrite(RIGHTENABLE, speedRight); //
-  digitalWrite(RIGHTFORWARD, HIGH); 
-  digitalWrite(RIGHTREVERSE, LOW);
-  analogWrite(LEFTENABLE, speedLeft); //
-  digitalWrite(LEFTFORWARD, HIGH);
-  digitalWrite(LEFTREVERSE, LOW); 
   delay(seconds);
 }
 
