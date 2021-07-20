@@ -28,12 +28,16 @@ void loop(){
     roverStop(0);
     exit(0);
   }
-  //else {
+
+  else {
+
     forward(2000,255);
     turnLeft(3000,80,255);
     forward(2000,255);
     turnRight(3000,255,80);
-  //}
+
+  }
+
 }
 
 void forward(int seconds, int speed) {
