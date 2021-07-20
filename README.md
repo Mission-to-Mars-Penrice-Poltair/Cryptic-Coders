@@ -21,7 +21,10 @@ Tomorrow we will continue going through the stories and do more coding.
 ### What we will do less of tomorrow
 Waiting (hopefully) and no panicking.
 ## Day 2 Retrospective
-
+Today we got a lot done and completed many stories. We also got good at using our softwares and de-bugging our codes quickly.
+We had quite a few errors but, after many trials we managed to fix them.
+Tomorrow we will hopefully complete all of the stories and finish our work.
+Waiting (hopefully).
 ## Final Retrospective
 
 This is the readme. Formatting of text is as follows.
