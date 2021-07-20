@@ -20,11 +20,18 @@ Not all members were present at the beginnng
 Tomorrow we will continue going through the stories and do more coding.
 ### What we will do less of tomorrow
 Waiting (hopefully) and no panicking.
+
 ## Day 2 Retrospective
+
+### What went well
 Today we got a lot done and completed many stories. We also got good at using our softwares and de-bugging our codes quickly.
+### What didn't go well
 We had quite a few errors but, after many trials we managed to fix them.
+### What we will do more of tomorrow
 Tomorrow we will hopefully complete all of the stories and finish our work.
+### What we will do less of tomorrow
 Waiting (hopefully).
+
 ## Final Retrospective
 
 This is the readme. Formatting of text is as follows.
