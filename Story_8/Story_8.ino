@@ -40,9 +40,9 @@ void loop(){
   forward(2000,255);
   turnRight(800,255,255);
   forward(2000,255);
-  turnRight(800,255,255);
+  turnRight(900,255,255);
   forward(2000,255);
-  turnRight(800,255,255);
+  turnRight(900,255,255);
   roverStop(0);
   exit(0);
 }
