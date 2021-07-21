@@ -41,20 +41,19 @@ void setup()
 }
 
 void loop(){
-
-  int distance = sonar.ping_cm();
-  Serial.print("Ping: ");
-  Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
-  Serial.println("cm");
+  int leftLight = analogRead(LEFT_LDR);
+  int centreLight = analogRead(CENTRE_LDR);
+  int rightLight = analogRead(RIGHT_LDR);
   
-  if(distance >= 13){
-    Serial.println("Drop detected");
-    roverStop(1000);
-    backward(1000,255);
-    exit(0);
-
+  if ((leftLight > centreLight) && (leftLight > rightLight)) {
+    turnLeft(250,255,255);
   }
-
+  else if ((centreLight >= leftLight)&& (centreLight >= rightLight)){
+    forward(250,255);
+  }
+  else{ 
+    turnRight(250,255,255);
+  }
 }
 
 void forward(int seconds, int speed) {
