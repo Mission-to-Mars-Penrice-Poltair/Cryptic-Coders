@@ -33,8 +33,12 @@ Tomorrow we will hopefully complete all of the stories and finish our work.
 Waiting (hopefully).
 
 ## Final Retrospective
+### What went well
+We finished all of the stories, and managed to do a final show.
+### What didnt go well
+The end presentation didnt go as planned. 
 
-This is the readme. Formatting of text is as follows.
+Overall, we all enjoyed working as a team, and being able to progress to the end of the stories. 
 
 # Largest Heading
 ## Smaller heading
