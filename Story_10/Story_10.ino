@@ -34,7 +34,12 @@ void setup()
 
 void loop(){
   int distance = sonar.ping_cm();
-  if(distance >= 12){
+  Serial.print("Ping: ");
+  Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
+  Serial.println("cm");
+  
+  if(distance >= 13){
+    Serial.println("Drop detected");
     roverStop(1000);
     backward(1000,255);
     exit(0);
