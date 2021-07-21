@@ -18,10 +18,6 @@ const int RIGHT_FEEDBACK = 2;
 volatile int leftcounter = 0; // initiate counter to zero for start
 volatile int rightcounter = 0; // counter could always be reset
 
-const int LEFT_LDR = A7;
-const int CENTRE_LDR = A6;
-const int RIGHT_LDR = A2;
-
 void setup()
 {
   pinMode(RIGHTFORWARD, OUTPUT);
@@ -34,24 +30,25 @@ void setup()
   attachInterrupt(digitalPinToInterrupt(LEFT_FEEDBACK),LeftMotorISR,RISING);
   attachInterrupt(digitalPinToInterrupt(RIGHT_FEEDBACK),RightMotorISR,RISING);
   sonar.ping_cm();
-  
-  pinMode(LEFT_LDR, INPUT);
-  pinMode(CENTRE_LDR, INPUT);
-  pinMode(RIGHT_LDR, INPUT);
 }
 
 void loop(){
+
 
   int distance = sonar.ping_cm();
   Serial.print("Ping: ");
   Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
   Serial.println("cm");
   
-  if(distance >= 13){
-    Serial.println("Drop detected");
-    roverStop(1000);
+
+  int distance = sonar.ping_cm();
+  if(distance >= 15){
     backward(1000,255);
+    roverStop(1000);
     exit(0);
+  }
+  else {
+    forward(50,255);
 
   }
 
