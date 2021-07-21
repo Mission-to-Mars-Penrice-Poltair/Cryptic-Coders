@@ -28,13 +28,13 @@ void setup()
 
 void loop(){
   forward(2000,255);
-  turnLeft(3000,80,255);
+  turnLeft(700,255,255);
   forward(2000,255);
-  turnLeft(3000,80,255);
+  turnLeft(700,255,255);
   forward(2000,255);
-  turnLeft(3000,80,255);
+  turnLeft(700,255,255);
   forward(2000,255);
-  turnLeft(3000,80,255);
+  turnLeft(700,255,255);
   roverStop(0);
   exit(0);
 }
@@ -76,15 +76,15 @@ void turnLeft(int seconds, int speedLeft, int speedRight) {
   digitalWrite(RIGHTFORWARD, HIGH); 
   digitalWrite(RIGHTREVERSE, LOW);
   analogWrite(LEFTENABLE, speedLeft); //
-  digitalWrite(LEFTFORWARD, HIGH);
-  digitalWrite(LEFTREVERSE, LOW); 
+  digitalWrite(LEFTFORWARD, LOW);
+  digitalWrite(LEFTREVERSE, HIGH); 
   delay(seconds);
 }
 
 void turnRight(int seconds, int speedLeft, int speedRight) {
   analogWrite(RIGHTENABLE, speedRight); //
-  digitalWrite(RIGHTFORWARD, HIGH); 
-  digitalWrite(RIGHTREVERSE, LOW);
+  digitalWrite(RIGHTFORWARD, LOW); 
+  digitalWrite(RIGHTREVERSE, HIGH);
   analogWrite(LEFTENABLE, speedLeft); //
   digitalWrite(LEFTFORWARD, HIGH);
   digitalWrite(LEFTREVERSE, LOW); 
