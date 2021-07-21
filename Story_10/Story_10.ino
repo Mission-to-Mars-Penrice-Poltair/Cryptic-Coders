@@ -40,8 +40,6 @@ void loop(){
   Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
   Serial.println("cm");
   
-
-  int distance = sonar.ping_cm();
   if(distance >= 15){
     backward(1000,255);
     roverStop(1000);
