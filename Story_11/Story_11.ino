@@ -46,13 +46,13 @@ void loop(){
   int rightLight = analogRead(RIGHT_LDR);
   
   if ((leftLight > centreLight) && (leftLight > rightLight)) {
-    turnLeft(250,255,255);
+    turnLeft(250,150,150);
   }
-  else if ((centreLight >= leftLight)&& (centreLight >= rightLight)){
-    forward(250,255);
+  else if ((rightLight > leftLight)&& (rightLight > centreLight)){
+    turnRight(250,150,150);
   }
   else{ 
-    turnRight(250,255,255);
+    forward(250,150);
   }
 }
 
