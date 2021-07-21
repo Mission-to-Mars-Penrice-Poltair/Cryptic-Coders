@@ -34,11 +34,7 @@ void setup()
 
 void loop(){
   int distance = sonar.ping_cm();
-<<<<<<< HEAD
   if( (distance <= 12) &&(distance>0)){
-=======
-  if ((distance <= 12) && (distance > 0)){
->>>>>>> d295d903699ff6281eb79fdcc319dd2c4186c21e
     roverStop(1000);
     backward(2000,255);
     turnLeft(700,255,255);
